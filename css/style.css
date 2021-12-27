@@ -117,10 +117,6 @@ header{
     transition: 0.3s;
 }
 @media (max-width:750px) {
-    body{
-        overflow-x: hidden;
-        padding: 20px;
-    }
     .img-perfil{
         margin-top: 5px;
         background-size: cover;
@@ -128,22 +124,23 @@ header{
     }
     header{
         position: fixed;
+        top: 0;
+        left: 20px;
         z-index: 1;
-        width: 100vw;
+        width: 95vw;
         height: 10vh;
     }
     #fixed{
         position: static;
-        width: 100vw;
+        width: 95vw;
         height: 10vh;
         border-radius: 20px;
     }
     .fixa_aux{
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         gap: 0px;
-        padding-right: 20px;
     }
     .container-titulo .titulo-seq{
         font-size: 1.5em;
@@ -267,12 +264,16 @@ main .container{
     padding-right: 8px;
 }
 @media (max-width:750px){
+    body{
+        padding: 20px 20px;
+        overflow-x: hidden;
+    }
     .container .titulo{
         font-size: 2em;
         line-height: 40px;
     }
     main{
-        width: 100vw;
+        width: 95vw;
         height: 100vh;
     }
 }

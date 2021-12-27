@@ -424,7 +424,6 @@ main .container-habilidades{
 .container-projetos{
     background-color: var(--card-blue);
     border-radius: 30px;
-    overflow-y: scroll;
 }
 .container-projetos .titulo-seq{
     margin-top: 80px;
@@ -435,9 +434,9 @@ main .container-habilidades{
 }
 .container-projetos .projetos{
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
     width: 100%;
     height: 50%;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
     gap: 20px;
     margin-top: 40px;
     padding-left: 40px;
@@ -460,7 +459,7 @@ main .container-habilidades{
     padding-left: 10px;
     padding-top: 10px;
     width: 100%;
-    height: 100%;
+    height: 180px;
 }
 .container-projetos .projetos a:hover{
     background-color: var(--botao-color);

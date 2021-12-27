@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200&display=swap');
 :root{
     --color-titulos: rgb(232, 230, 227);
-    --header-color: #3952BA;
+    --header-color: #4717F6;
     --card-blue:rgb(70, 92, 211);
     --card-branco: #FFFFFF;
     --botao-color:#FF5959;
@@ -9,6 +9,8 @@
     --color-text-background-white: #C4C4C4;
     --color-text-background-white-italic:#A9A9A9;
     --color-titulo-subitutlos-card:#000000;
+    --color-background:#0E0B16;
+    --hover:#6c757d;
     
 }
 body{
@@ -19,6 +21,7 @@ body{
     background-color: #F6F7FF;
     font-family: 'Nunito', sans-serif;
     line-height: 30px;
+    background-color: var(--color-background);
 }
 header{
     display: block;
@@ -40,6 +43,7 @@ header{
 .fixa_aux{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 40px;
 }
 .img-perfil{
@@ -87,23 +91,26 @@ header{
     text-decoration: none;
     color: white;
 }
+@media (max-width:750px) {
+    
+}
 
 /* Corpo html */
 main{
     width: 75vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: repeat(5, 100vh);
+    grid-template-rows: repeat(auto-fit, minmax(100vh,1fr));
     grid-gap: 40px;
     padding-bottom: 20px;
 }
 
 main .container{
     display: flex;
-    gap: 20px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     background-color: var(--card-blue);
     border-radius: 30px;
 }
@@ -112,6 +119,7 @@ main .container{
     font-weight: 800; 
     color: var(--color-titulos);
     width: 70%;
+    line-height: 50px;
 }
 .container .texto{
     font-size: 1em;
@@ -119,6 +127,64 @@ main .container{
     color: var(--color-titulos);
     width: 70%;
 }
+.container-buttom{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    width: 70%;
+}
+.container-buttom .botao{
+    padding: 8px 15px;
+    background-color: var(--botao-color);
+    border-radius: 20px;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; 
+    color: var(--color-titulos);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.container-buttom .botao:hover{
+    top:-4px;
+    box-shadow:2px 5px 4px 3px #ffffff1e;
+    background-color: var(--botao-color-blue);
+}
+
+.container-buttom .botao.blue{
+    background-color: var(--botao-color-blue);
+    border: 1px solid var(--card-branco);
+}
+.container-buttom .botao.blue:hover{
+    top:-4px;
+    box-shadow:2px 5px 4px 3px #ffffff1e;
+    background-color: var(--card-branco);
+    color: var(--hover);
+}
+.container-buttom .botao:first-child{
+    margin-right: 10px;
+}
+.container-buttom a{
+    text-decoration: none;
+}
+.container-buttom .botao i{
+    padding-right: 8px;
+}
+@media (max-width:750px){
+    .container .titulo{
+        font-size: 2em;
+        line-height: 40px;
+    }
+}
+@media (max-width:943px) {
+    .container-buttom{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+/*Seção Sobre Mim*/
 .container-sobre{
     display: grid;
     grid-template-rows: 20% 80%;
@@ -143,6 +209,7 @@ main .container{
 }
 .container-imagem .img-perfil{
     width: 100%;
+    margin-bottom: 200px;
     object-fit: cover;
 }
 .container-texto-sobre{
@@ -162,10 +229,11 @@ main .container{
     font-family: 'Nunito', sans-serif;
     font-weight: 800; 
     color: var(--color-titulo-subitutlos-card);
+    line-height: 40px;
 }
 .container-informacoes{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     justify-content: center;
 }
 .container-informacoes .itens-info{
@@ -178,10 +246,13 @@ main .container{
     font-weight: 400; 
     font-size: 1em;
 }
-.container-buttom{
-    margin-top: 20px;
+
+.container-buttom-sobre{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    width: 100%;
 }
-.container-buttom .botao{
+.container-buttom-sobre .botao-sobre{
     position: relative;
     padding: 8px 15px;
     background-color: var(--botao-color);
@@ -193,40 +264,43 @@ main .container{
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.container-buttom .botao:hover{
+.container-buttom-sobre .botao-sobre:hover{
     top:-4px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
     background-color: var(--botao-color-blue);
 }
 
-.container-buttom .botao.blue{
+.container-buttom-sobre .botao-sobre.blue{
     background-color: var(--botao-color-blue);
+    border: 1px solid var(--card-branco);
 }
-.container-buttom .botao.blue:hover{
+.container-buttom-sobre .botao-sobre.blue:hover{
     top:-4px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
-    background-color: var(--botao-color);
+    background-color: var(--card-branco);
+    color: var(--hover);
 }
-.container-buttom .botao:first-child{
+.container-buttom-sobre .botao-sobre:first-child{
     margin-right: 10px;
 }
-.container-buttom a{
+.container-buttom-sobre a{
     text-decoration: none;
 }
-.container-buttom .botao i{
+.container-buttom-sobre .botao-sobre i{
     padding-right: 8px;
 }
 
 /*Seção das Minhas Skils*/
 main .container-habilidades{
     display: grid;
-    grid-template-rows: 1fr 2fr auto-fit, minmax(300px,1fr);
+    grid-template-rows: repeat(auto-fit);
     grid-gap: 10px;
     border-radius: 30px;
     background-color: var(--card-branco);
     padding-top: 80px;
-    padding-left: 40px;
-    overflow-y:auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
 }
 .container-habilidades .texto{
     padding: 30px 0;
@@ -236,6 +310,7 @@ main .container-habilidades{
     padding-top: 50px;
     grid-template-columns: repeat(2,50%);
     grid-gap: 50px 5px;
+    box-sizing: border-box;
 }
 .container-progress-linguagens .progress-linguagens{
     position: relative;
@@ -273,14 +348,17 @@ main .container-habilidades{
     border-radius: 30px;
     padding-top: 80px;
     padding-left: 40px;
-    overflow-y: scroll;
-     /*Arrumar dps isso daq via responsividade*/
-    box-sizing: content-box;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+}
+.container-timeline .titulo-seq{
+    width: 80%;
+    word-break: break-all;
 }
 .container-timeline ul{
     position: relative;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 83px;
 }
 .container-timeline ul::before{
     content: '';
@@ -325,29 +403,20 @@ main .container-habilidades{
     font-weight: 400;
     color: var(--color-text-background-white);
 }
-@media (max-width:767px) {
-    .container-timeline{
+@media (max-width:830px) {
+    .container-timeline ul::before{
+        left: 100px;
+    }
+    .container-timeline ul li::before{
+        left: 96px;
+    }
+    .container-timeline ul li{
+        padding: 20px 20px 0 120px;
         width: 100%;
-        padding-bottom: 0;
-        height: 767px;
     }
-    .container-timeline::before{
-        left: 20px;
-    }
-    .container-timeline li{
-        width: 100%;
-        text-align: left;
-        padding-left: 50px;
-        padding-bottom: 50px;
-    }
-    .container-timeline li::before{
-        top: -18px;
-        left: 16px;
-    }
-    .container-timeline li .timeline-data{
-        top: -30px;
-        left: 50px;
-        right: inherit;
+    .container-timeline ul li .timeline-data{
+        left: -20px ;
+        width: 30%;
     }
 }
 

@@ -2,16 +2,16 @@
 :root{
     --color-titulos: rgb(232, 230, 227);
     --header-color: #4717F6;
-    --card-blue:rgb(70, 92, 211);
-    --card-branco: #FFFFFF;
-    --botao-color:#FF5959;
-    --botao-color-blue:#4A63E7;
+    --card-blue: #031424;
+    --card-branco: #30415D;
+    --botao-color: #CF6766;
+    --botao-color-blue:#4717F6;
     --color-text-background-white: #C4C4C4;
     --color-text-background-white-italic:#A9A9A9;
     --color-titulo-subitutlos-card:#000000;
-    --color-background:#0E0B16;
+    --color-background:#4717F6;
     --hover:#6c757d;
-    
+    --cartao-projetos: #54668E;
 }
 html{
     scroll-behavior: smooth;
@@ -228,6 +228,7 @@ main .container{
     width: 70%;
 }
 .container-buttom .botao{
+    position: relative;
     padding: 8px 15px;
     background-color: var(--botao-color);
     border-radius: 20px;
@@ -239,19 +240,19 @@ main .container{
     transition: all 0.5s ease;
 }
 .container-buttom .botao:hover{
-    top:-4px;
+    top: -8px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
     background-color: var(--botao-color-blue);
 }
 
 .container-buttom .botao.blue{
-    background-color: var(--botao-color-blue);
+    background-color: #8FADBB;
     border: 1px solid var(--card-branco);
 }
 .container-buttom .botao.blue:hover{
     top:-4px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
-    background-color: var(--card-branco);
+    background-color: #F9C001;
     color: var(--hover);
 }
 .container-buttom .botao:first-child{
@@ -299,6 +300,7 @@ main .container{
 .container-sobre > .titulo-seq{
     margin-left: 40px;
     margin-top: 80px;
+    color:var(--color-titulos);
 }
 .conteudo-sobre{
     display: flex;
@@ -331,7 +333,7 @@ main .container{
     font-size: 2em;
     font-family: 'Nunito', sans-serif;
     font-weight: 800; 
-    color: var(--color-titulo-subitutlos-card);
+    color: var(--color-titulos);
     line-height: 40px;
 }
 .container-informacoes{
@@ -374,7 +376,7 @@ main .container{
 }
 
 .container-buttom-sobre .botao-sobre.blue{
-    background-color: var(--botao-color-blue);
+    background-color: #8FADBB;
     border: 1px solid var(--card-branco);
 }
 .container-buttom-sobre .botao-sobre.blue:hover{
@@ -405,8 +407,12 @@ main .container-habilidades{
     padding-right: 50px;
     padding-bottom: 80px;
 }
+.container-habilidades .titulo-seq{
+    color: var(--color-titulos);
+}
 .container-habilidades .texto{
     padding: 30px 0;
+    color:var(--color-text-background-white);
 }
 .container-progress-linguagens{
     display: grid;
@@ -424,6 +430,7 @@ main .container-habilidades{
     font-weight: bold;
     position: absolute;
     top: -28px;
+    color: #fff;
 }
 .progress-linguagens label{
     font-size: 0.8em;
@@ -547,7 +554,7 @@ main .container-habilidades{
     box-sizing: border-box;
 }
 .container-projetos .projetos a{
-    background-color: #888;
+    background-color: var(--cartao-projetos);
     border-radius: 10px;
     padding: 10px;
     text-decoration: none;

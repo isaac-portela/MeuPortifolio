@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200&display=swap');
 :root{
     --color-titulos: rgb(232, 230, 227);
-    --header-color: #4717F6;
-    --card-blue: #031424;
-    --card-branco: #30415D;
-    --botao-color: #CF6766;
+    --header-color: #250599;
+    --card-blue: #250599;
+    --card-escuro: #020516;
+    --botao-color: #F7335D;
     --botao-color-blue:#4717F6;
     --color-text-background-white: #C4C4C4;
     --color-text-background-white-italic:#A9A9A9;
     --color-titulo-subitutlos-card:#000000;
-    --color-background:#4717F6;
+    --color-background:#010A1B;
     --hover:#6c757d;
-    --cartao-projetos: #54668E;
+    --cartao-projetos: #11160e46;
 }
 html{
     scroll-behavior: smooth;
@@ -104,6 +104,10 @@ header{
 .container-social-medias a{
     text-decoration: none;
     color: white;
+    transition: all 0.5s linear;
+}
+.container-social-medias a:hover{
+    color:var(--botao-color)
 }
 .mobile-menu{
     display: none;
@@ -247,12 +251,12 @@ main .container{
 
 .container-buttom .botao.blue{
     background-color: #8FADBB;
-    border: 1px solid var(--card-branco);
+    border: 1px solid var(--card-escuro);
 }
 .container-buttom .botao.blue:hover{
     top:-4px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
-    background-color: #F9C001;
+    background-color: #0F335D;
     color: var(--hover);
 }
 .container-buttom .botao:first-child{
@@ -295,7 +299,7 @@ main .container{
     grid-gap: 40px;
     background-color: var(--card-blue);
     border-radius: 30px;
-    background-color: var(--card-branco);
+    background-color: var(--card-escuro);
 }
 .container-sobre > .titulo-seq{
     margin-left: 40px;
@@ -377,12 +381,12 @@ main .container{
 
 .container-buttom-sobre .botao-sobre.blue{
     background-color: #8FADBB;
-    border: 1px solid var(--card-branco);
+    border: 1px solid var(--card-escuro);
 }
 .container-buttom-sobre .botao-sobre.blue:hover{
     top:-4px;
     box-shadow:2px 5px 4px 3px #ffffff1e;
-    background-color: var(--card-branco);
+    background-color: var(--card-escuro);
     color: var(--hover);
 }
 .container-buttom-sobre .botao-sobre:first-child{
@@ -401,7 +405,7 @@ main .container-habilidades{
     grid-template-rows: repeat(auto-fit);
     grid-gap: 10px;
     border-radius: 30px;
-    background-color: var(--card-branco);
+    background-color: var(--card-escuro);
     padding-top: 80px;
     padding-left: 50px;
     padding-right: 50px;
@@ -446,7 +450,7 @@ main .container-habilidades{
     width: 100%;
 }
 .progress-linguagens progress::-webkit-progress-value {
-    background: #FF5959;
+    background: #F7335D;
 }
 .progress-linguagens progress::-webkit-progress-bar{
    background: #EBEBEB;
@@ -454,7 +458,7 @@ main .container-habilidades{
 
 /*Timeline de experiencias*/
 .container-timeline{
-    background-color: var(--card-branco);
+    background-color: var(--card-escuro);
     border-radius: 30px;
     padding-top: 80px;
     padding-left: 40px;
@@ -464,6 +468,9 @@ main .container-habilidades{
 .container-timeline .titulo-seq{
     width: 80%;
     word-break: break-all;
+}
+.timeline-corpo p{
+    color: var(--color-text-background-white);
 }
 .container-timeline ul{
     position: relative;
@@ -476,7 +483,7 @@ main .container-habilidades{
     left: 230px;
     width: 2px;
     height: 85%;
-    background-color: var(--botao-color);
+    background-color: #F7335D;
 }
 .container-timeline ul li{
     position: relative;
@@ -558,7 +565,7 @@ main .container-habilidades{
     border-radius: 10px;
     padding: 10px;
     text-decoration: none;
-    color: var(--card-branco);
+    color: var(--card-escuro);
     transition: all 0.5s ease-in-out;
 }
 .container-projetos .projetos a .projeto-itens{
@@ -571,13 +578,15 @@ main .container-habilidades{
     height: 180px;
 }
 .container-projetos .projetos a:hover{
-    background-color: var(--botao-color);
+    background-color: #4717F6;
 }
 .container-projetos .projetos a .projeto-itens h5{
     font-size: 1em ;
     font-weight: 800;
+    color:var(--color-titulos);
 }
 .container-projetos .projetos a .projeto-itens h6{
     font-size: 0.8em ;
     font-weight: 400;
+    color: var(--color-titulos);
 }

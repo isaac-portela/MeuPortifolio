@@ -739,4 +739,5 @@ main .container-habilidades {
     font-size: 0.8em;
     font-weight: 400;
     color: var(--color-titulos);
+    line-height: 20px;
 }
